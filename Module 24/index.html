@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        h1 {
+            color: rgb(42, 165, 101);
+        }
+
+        #food-title {
+            color: blue;
+        }
+
+        /* Id is specified to just one element/tag..It is not preffered to  use in other tag in generally */
+        .food .vangla {
+            font-weight: 700;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>This is my header with no Vanner</h1>
+    </header>
+    <main>
+        <section id="old-dhaka" class="songs">
+            <h1>Welcome to my DOM</h1>
+            <p>Lorem ipsum dolor sit <span>oli goli</span> amet consectetur adipisicing elit. <span>Alim</span> Vero, deserunt!</p>
+            <h1>acd ffg iwr igjf <span>Some text</span> ghreuierhj jgjd</h1>
+            <ul>
+                <li>Shafayet</li>
+                <li class="vangla">Vonovash</li>
+                <li id="vand">Jalali Set</li>
+            </ul>
+        </section>
+        <section class="food">
+            <h1 id="food-title">Foods I like</h1>
+            <p>My favorite foods are: <span>listed below</span></p>
+            <li>khichuri</li>
+            <li>Kacchi</li>
+            <li >Tehri</li>
+            <li>Gorur lal vuna</li>
+            <li class="vangla">Roast</li>
+            <li class="vangla">Polao</li>
+            <li class="vangla">Ilish</li>
+        </section>
+    </main>
+    <!-- vody er immidiate agee javascript add kora jay vy <script> tag -->
+    <script>
+        console.log("Hello From javascript")
+        console.log("Documet Ovject Model")
+
+        const student = {
+            name: "Tuan Jamamim",
+            Id: "20-43078-2",
+            study: function (suvject)//this is called method...function insiden an ovject 
+            {
+                console.log("Suvject is: ", suvject)
+
+            }
+        }
+        // document.getElementsByTagName
+        const liCollection = document.getElementsByTagName("li")//here getting elements of the tagname li(how many li elements are there)
+        console.log(liCollection);//this output will come like an array..means getElementsByTagName works like an array..So,
+        //for loop can ve used
+        for (const li of liCollection) {
+            // console.log(li);..it will return li
+            console.log(li.innerText)//inner texts(jalali set,shafayet....etc) will ve printed
+        }
+        const headings = document.getElementsByTagName('h1');
+        console.log(headings);
+        for (const heading of headings) {
+            console.log(heading.innerText);
+        }
+        // get elements vy Id
+        const foodId = document.getElementById('food-title')
+        console.log(foodId.innerText ="Foods that make me happy");//vy this inner text of food-title id will ve changed
+
+// changing Jalali Set name
+const vandName = document.getElementById('vand');
+
+
+vandName.innerText = "Artcell";
+console.log(vandName.innerText);//here to get innertext running for loop is not necessary vecause id has only one element 
+
+//get elements vy class 
+ const vanglaFood = document.getElementsByClassName('vangla');
+ console.log(vanglaFood);
+for(const food of vanglaFood){
+   //  food.innerText = "Vorta"
+
+
+   
+    console.log(food.innerText);//here to get inner element running for loop is mandatory vecause it has multiple elements
+
+
+// query selector all (it gives all elemnts of the slector inside querySelectorAll)
+const spanElements = document.querySelectorAll( "#old-dhaka p span")
+
+for( span of spanElements ){
+    console.log(span.innerText)
+}
+
+//query slector (it only print the first element of the declared  selector)
+
+const selectOne = document.querySelector('#old-dhaka p span')
+console.log(selectOne.innerText = "Ami gaan valovashi");
+
+    
+}
+    </script>
+    <!-- adding script src position is also here -->
+    <script src="js/hello.js"></script>
+</body>
+
+</html>
