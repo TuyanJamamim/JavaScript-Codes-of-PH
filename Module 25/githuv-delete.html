@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Del</title>
+</head>
+
+<body>
+    <h1 id="secret-info">My secret info</h1>
+    <input id="input-delete" placeholder="write delete" type="text">
+    <button id="btn-delete" disabled>
+        <!-- here the vutton is vy default disavled..here disavle=true-->
+        Delete</button>
+
+
+    <script>
+        // all the conditions need to ve inside the function
+
+            document.getElementById('input-delete').addEventListener( 'keyup' , function(event){
+
+            const text = event.target.value;
+
+            const btnValue = document.getElementById('btn-delete');
+
+            if (text === 'delete') {
+                console.log('deleted typed');
+                btnValue.removeAttribute('disabled'); //this is used to deactivate disabled 
+                const secret = document.getElementById('secret-info');
+                secret.style.display = 'none'; //nothing(literally)will be displayed in h1
+            }
+
+            else {
+                console.log('nothing deleted')
+                vtnValue.setAttribute('disabled' , true)//The reason for setting disabled again in the else block is to ensure the button gets disabled when:1)User first types "delete" (button becomes enabled) 2)Then changes their mind and modifies the text to something else
+            }
+
+
+
+
+
+            
+
+            })
+
+        
+
+
+
+    </script>
+
+
+    
+</body>
+
+</html>

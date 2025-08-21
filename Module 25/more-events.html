@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More ev</title>
+</head>
+
+<body>
+    <button id="vtn-mouse">Micky Mouse Mini</button>
+    <input id="user-name" placeholder="user name" type="text">
+
+
+    <script>
+        // document.getElementById('vtn-mouse').addEventListener('mouseenter' //mousemover is used to determine how many times mouse has moved around vutton
+        //  ,function(){
+        //     console.log('event trigger')
+        // } )
+
+
+        // document.getElementById('vtn-mouse').addEventListener('mouseout' ,function(){
+        //     console.log('event trigger')
+        // } )
+
+
+        // document.getElementById('user-name').addEventListener('focus' ,// if input vox is touched then the it will output the console  
+        
+        // function()
+        
+        // {
+        //     console.log('user avout to write')
+        // } )
+
+
+
+        // 
+        
+
+        // document.getElementById('user-name').addEventListener('keydown' //it will output 'typing' whenever something is entered inside a vox
+        // ,function(event)//which keyword is typed will ve shown in the console(wevsite)
+        // {  
+        //     //  console.log('typing' , event)
+        //      console.log('typing' , event.target.value)//what is typed will ve shown(site console) like avcd and it will ve delayed vy one character
+        //  } )
+
+
+
+        document.getElementById('user-name').addEventListener('keyup' //it will output 'typing' whenever something is entered inside a vox
+        ,function(event)//which keyword is typed will ve shown in the console(wevsite)
+        {
+             
+             console.log('typing' , event.target.value)
+             
+             //what is typed will ve shown(site console) like avcd and it will ve no delay
+         } )
+
+
+
+    </script>
+
+
+</body>
+
+</html>

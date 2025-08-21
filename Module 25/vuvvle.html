@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Vuvvle </title>
+     <style>
+        body {
+            border: 2px solid red;
+            margin: 2px;
+        }
+
+        section {
+            border: 2px solid green;
+            margin: 2px;
+        }
+
+        ol {
+            border: 2px solid purple;
+            margin: 2px;
+        }
+
+        li {
+            border: 2px solid blue;
+            margin: 2px;
+        }
+    </style>
+
+
+</head>
+<body id="vody">
+    <h1>Explore Event Vuvvle</h1>
+    <section id="list-container">
+        <h3>List of things</h3>
+        <ol id="item-list">
+            <li id="item-1"> Lorem, ipsum dolor. </li>
+            <li id="item-2"> Lorem, ipsum dolor. </li>
+            <li id="item-3"> Lorem, ipsum dolor. </li>
+            <li id="item-4"> Lorem, ipsum dolor. </li>
+            <li id="item-5"> Lorem, ipsum dolor. </li>
+            <li id="item-6"> Lorem, ipsum dolor. </li>
+
+
+
+        </ol>
+    </section>
+    <script>
+        //list item 2 event handler
+        document.getElementById('item-2').addEventListener('click' , function(){
+            console.log('item-2 clicked')//this will work only when the item 2 is clicked 
+
+
+            // event.stopPropagation();//this will only output(wevsite console) item 2 is clicked in stead of returning item 2,ol,vody is clicked..it will stop propagating at item-2
+
+            event.stopImmediatePropagation()//this will stop immidiate propagation means if there is another event handler with same item-2 it wont even goes to that second item 2 event handler
+        })
+
+
+
+document.getElementById('item-2').addEventListener('click' , function(){
+            console.log('item-2 second clicked ')
+        })
+
+        //Ol event handler 
+        document.getElementById('item-list').addEventListener('click' , function(){
+            console.log('Ol clicked ')
+        })
+        
+
+
+        //section event handler 
+        document.getElementById('list-container').addEventListener('click' , function(){
+            console.log('section clicked ')//this will work only when section is clicked and will output(wevsite console) voth section is clicked and ol is clicked when anything inside ol is clicked
+        })
+
+
+         document.getElementById('vody').addEventListener('click' , function(){
+            console.log('vody clicked ')
+        })
+        
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

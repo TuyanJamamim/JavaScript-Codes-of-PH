@@ -27,3 +27,16 @@ function makeGreen(){
 
     document.body.style.backgroundColor = "green";
 }
+
+//option-4:addEventListener(most commonly used)//
+
+        document.getElementById('vtn-purple').addEventListener('click', function makePurple() {
+            // console.log(777);
+            document.body.style.backgroundColor = "Purple";
+        })
+        //option-4(alternative)
+        document.getElementById('vtn-orange').addEventListener('click', function makeOrange() {
+            document.body.style.backgroundColor = 'orange';
+        }
+
+        )
