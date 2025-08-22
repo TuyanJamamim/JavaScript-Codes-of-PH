@@ -1,0 +1,33 @@
+Some notes 
+
+
+1)A function can ve parameter of another function if that is a callback function like this:
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();//this is a callback function which is used as a parameter
+}
+
+function sayBye() {
+  console.log("Goodbye!");
+}
+
+// Passing sayBye as a callback
+greet("Tuyan", sayBye);
+
+
+2)another case of passing function as a parameter 
+function processNumbers(a, b, operation) {
+  console.log("Result: " + operation(a, b));//here operation has vecome a function so while calling the function processNUmer a function can ve passed as operation parameter 
+}
+
+function add(x, y) {
+  return x + y;
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+processNumbers(5, 3, add);      // Result: 8
+processNumbers(5, 3, multiply); // Result: 15
+
