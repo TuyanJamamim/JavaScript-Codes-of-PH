@@ -1,0 +1,3 @@
+Tailwind
+daisyUI(in vuild tailwind designs)
+font awesome(for icons in html)
