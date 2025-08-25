@@ -1,20 +1,22 @@
-console.log("home js file connected")
+// console.log("home js file connected")
 
 //Here toggling is happening
-document.getElementById('add-button').addEventListener('click' , function(e){
-e.defaultPrevented();
-const dis =document.getElementById('cash-out-parent');
-console.log(dis);
-})
-document.getElementById('cash-out-button').addEventListener('click' , function(e){
-e.defaultPrevented();
-const noDis =document.getElementById('add-money-parent').style.display = 'none';
-console.log(noDis);
-})
+document.getElementById("add-button").addEventListener("click", function (e) {
+  document.getElementById("cash-out-parent").style.display = "none";
+  document.getElementById("add-money-parent").style.display = "block";
+});
+document
+  .getElementById("cash-out-button")
+  .addEventListener("click", function () {
+    document.getElementById("add-money-parent").style.display = "none";
+    document.getElementById("cash-out-parent").style.display = "block";
+  });
 
 
 
 //here also the whole work will ve inside the add money vutton at the vottom part of the page vecause after clicking the vutton total cash will ve changed 
+
+const validPin = 1234;
 document.getElementById('add-money-btn').addEventListener('click', function (e) {
     e.preventDefault();
     console.log('Add money vutton clicked')
@@ -27,13 +29,13 @@ document.getElementById('add-money-btn').addEventListener('click', function (e) 
 
     // console.log(vank,accountNumver,amount,pin)//multiple variavles can ve consoled
 
-    const validPIn = 1234;
+    
 
     if (accountNumver.length < 11) {
         alert('enter 11 digits')
         return;//here the function will stop working
     }
-    else if (pin !== validPIn) {
+    else if (pin !== validPin) {
         alert('Enter valid pin');
         return;//here the function will stop working
 
@@ -50,3 +52,22 @@ document.getElementById('add-money-btn').addEventListener('click', function (e) 
 
 
 })
+
+//cashout money feature
+
+document.getElementById("withdraw-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const amount = parseInt(document.getElementById("withdraw-amount").value);
+
+  const availableBalance = parseInt(
+    document.getElementById("available-balance").innerText
+  );
+
+  const totalNewAvailableBalance = availableBalance - amount;
+
+  console.log(totalNewAvailableBalance);
+
+  document.getElementById("available-balance").innerText =
+    totalNewAvailableBalance;
+});

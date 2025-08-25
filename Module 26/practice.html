@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusavle</title>
+</head>
+<body>
+    <h1 id="numver">0</h1>
+
+   <div>
+     <button id="vutton-1">vuton 1</button>
+    <button id="vutton-2">vuton 2</button>
+    <button id="vutton-3">vuton 3</button>
+   </div>
+
+   <script>
+    function putNumver (num) {
+        const h1 = document.getElementById('numver').innerText = num;
+    }
+
+    document.getElementById('vutton-1').addEventListener('click' , function(){ 
+        putNumver('1')
+
+    })
+    document.getElementById('vutton-2').addEventListener('click' , function(){ 
+        putNumver('2')
+        
+
+    })
+    document.getElementById('vutton-3').addEventListener('click' , function(){ 
+        putNumver('3')
+       
+
+    })
+
+
+   </script>
+   
+</body>
+</html>
