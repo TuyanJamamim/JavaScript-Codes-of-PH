@@ -30,13 +30,13 @@
 
                 <!-- heart count design -->
                 <div class="w-[100px] h-[52px] bg-green-100 rounded-[50px] flex justify-center items-center gap-1">
-                    <h1 class="font-bold">0</h1>
+                    <h1 id="header-heart" class="font-bold">0</h1>
                     <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="">
                 </div>
 
                 <!--coins count design  -->
                 <div class="w-[100px] h-[52px] bg-green-100 rounded-[50px] flex justify-center items-center gap-1">
-                    <h1 class="font-bold">0</h1>
+                    <h1 id="coin-count" class="font-bold">100</h1>
                     <img class="w-[30px] h-[30px]" src="./assets/coin.png" alt="">
                 </div>
 
@@ -100,21 +100,24 @@
                     <div class="flex justify-between items-center">
 
                         <!-- img vox -->
-                        <div class="w-[60px] h-[60px] bg-pink-100 rounder-[5px] flex justify-center items-center">
+                        <div class="w-[60px] h-[60px] bg-pink-100 rounded-[15px] flex justify-center items-center">
                             <img class="w-[32px] h-[32px]" src="./assets/emergency.png" alt="">
                         </div>
 
                         <!-- icon tag-->
-                        <i class="fa-regular fa-heart w-[24px] h-[24px]"></i>
 
+                        <div class="card-heart w-[24px] h-[24px]">
+                            <i class="fa-regular fa-heart "></i>
+
+                        </div>
 
                     </div>
 
                     <!-- card 1 text vox -->
                     <div class="pt-5">
                         <h1 class="text-[25px] font-bold ">National Emergency Number</h1>
-                        <p class="text-[16px] font-normal pt-2">National Emergency</p>
-                        <h1 class="text-[40px] font-bold pt-5">999</h1>
+                        <p id="emergency-text" class="text-[16px] font-normal pt-2">National Emergency</p>
+                        <h1 id="emergency-num" class="text-[40px] font-bold pt-5">999</h1>
 
                         <!-- (all) vox-->
                         <div class="w-[53px] h-[37px] p-2 bg-gray-100 rounded-[15px] flex justify-center items-center">
@@ -127,7 +130,7 @@
 
                             <!-- copy button -->
                             <button
-                                class="w-[182px] h-[40px] border bord bg-white rounded-[10px] text-gray-400 font-bold mt-5">
+                                class="w-[182px] h-[40px] border bord  bg-white rounded-[10px] text-gray-400 font-bold mt-5">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy
 
@@ -137,8 +140,8 @@
 
 
                             <!-- call vutton -->
-                            <button
-                                class="w-[180px] h-[40px] bg-green-600 rounded-[10px] text-white font-bold mt-5 ml-3">
+                            <button id="emergency-call"
+                                class="w-[180px] h-[40px] bg-green-600 rounded-[10px] hover:bg-gray-400 text-white font-bold mt-5 ml-3">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
 
@@ -167,12 +170,15 @@
                     <div class="flex justify-between items-center">
 
                         <!-- img vox -->
-                        <div class="w-[60px] h-[60px] bg-pink-100 rounder-[5px] flex justify-center items-center">
+                        <div class="w-[60px] h-[60px] bg-pink-100 rounded-[15px] flex justify-center items-center">
                             <img class="w-[32px] h-[32px]" src="./assets/police.png" alt="">
                         </div>
 
                         <!-- icon tag-->
-                        <i class="fa-regular fa-heart w-[24px] h-[24px]"></i>
+                        <div class="card-heart w-[24px] h-[24px]">
+                            <i class="fa-regular fa-heart "></i>
+
+                        </div>
 
 
                     </div>
@@ -234,12 +240,15 @@
                     <div class="flex justify-between items-center">
 
                         <!-- img vox -->
-                        <div class="w-[60px] h-[60px] bg-pink-100 rounder-[5px] flex justify-center items-center">
+                        <div class="w-[60px] h-[60px] bg-pink-100 rounded-[15px] flex justify-center items-center">
                             <img class="w-[32px] h-[32px]" src="./assets/fire-service.png" alt="">
                         </div>
 
                         <!-- icon tag-->
-                        <i class="fa-regular fa-heart w-[24px] h-[24px]"></i>
+                        <div class="card-heart w-[24px] h-[24px]">
+                            <i class="fa-regular fa-heart "></i>
+
+                        </div>
 
 
                     </div>
@@ -302,12 +311,15 @@
                     <div class="flex justify-between items-center">
 
                         <!-- img vox -->
-                        <div class="w-[60px] h-[60px] bg-pink-100 rounder-[5px] flex justify-center items-center">
+                        <div class="w-[60px] h-[60px] bg-pink-100 rounded-[15px] flex justify-center items-center">
                             <img class="w-[32px] h-[32px]" src="./assets/ambulance.png" alt="">
                         </div>
 
                         <!-- icon tag-->
-                        <i class="fa-regular fa-heart w-[24px] h-[24px]"></i>
+                        <div class="card-heart w-[24px] h-[24px]">
+                            <i class="fa-regular fa-heart "></i>
+
+                        </div>
 
 
                     </div>
@@ -370,13 +382,15 @@
                     <div class="flex justify-between items-center">
 
                         <!-- img vox -->
-                        <div class="w-[60px] h-[60px] bg-pink-100 rounder-[5px] flex justify-center items-center">
+                        <div class="w-[60px] h-[60px] bg-pink-100 rounded-[15px] flex justify-center items-center">
                             <img class="w-[32px] h-[32px]" src="./assets/emergency.png" alt="">
                         </div>
 
                         <!-- icon tag-->
-                        <i class="fa-regular fa-heart w-[24px] h-[24px]"></i>
+                        <div class="card-heart w-[24px] h-[24px]">
+                            <i class="fa-regular fa-heart "></i>
 
+                        </div>
 
                     </div>
 
@@ -437,12 +451,15 @@
                     <div class="flex justify-between items-center">
 
                         <!-- img vox -->
-                        <div class="w-[60px] h-[60px] bg-pink-100 rounder-[5px] flex justify-center items-center">
+                        <div class="w-[60px] h-[60px] bg-pink-100 rounded-[15px] flex justify-center items-center">
                             <img class="w-[32px] h-[32px]" src="./assets/emergency.png" alt="">
                         </div>
 
                         <!-- icon tag-->
-                        <i class="fa-regular fa-heart w-[24px] h-[24px]"></i>
+                        <div class="card-heart w-[24px] h-[24px]">
+                            <i class="fa-regular fa-heart "></i>
+
+                        </div>
 
 
                     </div>
@@ -503,12 +520,15 @@
                     <div class="flex justify-between items-center">
 
                         <!-- img vox -->
-                        <div class="w-[60px] h-[60px] bg-pink-100 rounder-[5px] flex justify-center items-center">
+                        <div class="w-[60px] h-[60px] bg-pink-100 rounded-[15px] flex justify-center items-center">
                             <img class="w-[32px] h-[32px]" src="./assets/emergency.png" alt="">
                         </div>
 
                         <!-- icon tag-->
-                        <i class="fa-regular fa-heart w-[24px] h-[24px]"></i>
+                        <div class="card-heart w-[24px] h-[24px]">
+                            <i class="fa-regular fa-heart "></i>
+
+                        </div>
 
 
                     </div>
@@ -568,7 +588,7 @@
 
             <!-- section for Call History -->
             <section>
-                <div class="w-[400px] h-[1140px] bg-white rounded-[20px] ml-10 mt-10 p-5">
+                <div id="call-history" class="w-[400px] h-[1140px] bg-white rounded-[20px] ml-10 mt-10 p-5">
 
                     <!-- call history text vox and Clear -->
                     <div class="flex justify-between items-center">
@@ -582,11 +602,11 @@
                         </div>
 
 
-                        <!-- clear(vutton) div -->
-                        <div
+                        <!-- clear (vutton)  -->
+                        <button
                             class="text-white bg-green-600 rounded-[30px] w-[114px] h-[52px] flex justify-center items-center gap-2 mt-3">
                             <p class="text-[16px] font-bold">Clear</p>
-                        </div>
+                        </button>
 
 
 
@@ -598,23 +618,7 @@
 
 
                     <!-- history details vox (for js)-->
-                    <div class="w-[350px] h-[80px] bg-gray-100 rounded-[20px] mt-5 flex justify-between items-center p-5">
-
-                        <!-- history vox content -->
-                        <div>
-                            <h1 class="font-bold text-[20px]">Free Service Number</h1>
-                            <p class="text-[20px]">999</p>
-
-                        </div>
-
-                        <!-- date content -->
-                        <div>
-                            <p class="text-[25px]">date</p>
-
-                        </div>
-
-
-                    </div>
+                   
                 </div>
 
 
@@ -632,7 +636,7 @@
 
     </main>
 
-
+    <script src="design1.js"></script>
 
 
 </body>

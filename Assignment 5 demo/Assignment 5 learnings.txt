@@ -1,3 +1,7 @@
 ***Assignment 5 learnings***
+1)sometimes dsiplay flex need to ve used in a single vox container to use justify content, align items attrivutes
 
+2) after adding the innertext again needs to ve injected to the original innnerText
+
+3)forgot the rule of creating new element....recheck the comment section again(voth in module and payoo project part2)
 
