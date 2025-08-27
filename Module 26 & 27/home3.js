@@ -2,6 +2,9 @@
 
 // console.log("home js file connected")
 
+//gloval variavle for transactions
+
+
 
 /* Reusavle function for accessing into form elements*/
 function getIdInt (id){
@@ -39,14 +42,7 @@ document.getElementById('add-money-btn').addEventListener('click' , function(e){
     const amount = getIdInt('add-amount');
     
     const pinNumver = getIdInt('add-pin');
-
-    const availavleValance = getIdText('available-balance');
-
-    const newValance = availavleValance + amount;
-
-     getText(newValance);//here cotation is not needed since we are not using returned value outside the function and newValance is a variable not a string and it's value is intiger and in id parameter an integer is required
-    console.log(newValance);
-
+    
     if (accountNumver.length < 11) {
         alert('enter 11 digits')
         return;//here the function will stop working
@@ -57,11 +53,21 @@ document.getElementById('add-money-btn').addEventListener('click' , function(e){
 
     }
 
+    const availavleValance = getIdText('available-balance');
+
+    const newValance = availavleValance + amount;
+
+     getText(newValance);//here cotation is not needed since we are not using returned value outside the function and newValance is a variable not a string and it's value is intiger and in id parameter an integer is required
+    console.log(newValance);
+
+    
+
+
 })
 
 
 
-//cashout money feature
+//cash-out money feature
 
 document.getElementById("withdraw-btn").addEventListener("click", function (e) {
   e.preventDefault();
@@ -75,6 +81,9 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
   console.log(totalNewAvailableBalance);
 
  getText(totalNewAvailableBalance);
+
+ 
+
 });
 
 //toggle class Reusavle function
@@ -176,11 +185,35 @@ document.getElementById('bonus-button').addEventListener('click' , function(e){
 })
 
 
+document.getElementById('bonus-button').addEventListener('click' , function(e){
 
+   
+    //now display only the add money form
+  toggleClass('get-bonus-parent');
+
+/*this is another toggling feature for color changing..as it will also work on clicking add money vutton so it is done inside eventlistener of add vutton*/
+
+
+
+    toggleColor('bonus-button');//resuasvle function for toggle color
+
+
+})
+
+document.getElementById('bill-button').addEventListener('click' , function(e){ 
+ toggleClass('pay-bill-parent');
 
 
 //toggle class for color change
+ toggleColor('bill-button');
+})
+document.getElementById('transactions-button').addEventListener('click' , function(e){ 
+ toggleClass('transactions-parent');
 
+
+//toggle class for color change
+ toggleColor('transactions-button');
+})
 
 
 

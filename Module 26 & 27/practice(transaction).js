@@ -1,0 +1,1 @@
+//add vutton,cah out vtn event handler er moddhe data ovject then je je value dekha lagve segulor jonno 
