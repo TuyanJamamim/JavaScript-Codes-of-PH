@@ -5,3 +5,5 @@
 
 3)forgot the rule of creating new element....recheck the comment section again(voth in module and payoo project part2)
 
+4)A very effective technique to make any array,ovject or any element empty is  const historyFCard = document.getElementById('history-container');
+    historyFCard.innerText = "";
